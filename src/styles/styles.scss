@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", serif;
+    cursor: none !important;
+}
+
+body {
+    overflow-x: hidden;
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.mainContainer {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container1, .container2, .container3 {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.container2{
+    height: 110vh;
+}
+
+.container1 {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    background-image: url('../images/background-black.png');
+    background-size: cover;
+    background-position: center;
+}
+.container-white{
+    width: 100vw;
+}
+
+
+.backImg {
+    background-color: transparent;
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    z-index: 1;
+    opacity: 0.3;
+    filter: blur(6px);
+    animation: rotate 200s infinite;
+}
+.two{
+    position: absolute;
+    background-image: url('../images/back-obj.png');
+    background-position: center;
+    background-size: cover;
+    left: -25em;
+    bottom: -25em;
+    margin: 0;
+}
+
+.coverScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftSidebar {
+    width: 16%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin: 30px auto;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.sidebarText {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.textSection {
+    width: 100%;
+    height: fit-content;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgba(255, 255, 255, 0.413);
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.textBox {
+    width: 100%;
+    height: 20px;
+    font-size: 18px;
+    padding-left: 20px;
+    transition: 0.3s;
+}
+
+.textBox:hover {
+    color: rgba(255, 255, 255, 0.849);
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.779);
+}
+
+.mainTextContainer {
+    width: 50%;
+    height: 40%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mainText {
+    width: 100%;
+    font-size: 9em;
+    text-align: center;
+    line-height: 0.8em;
+    color: white;
+    font-weight: bold;
+    margin: auto;
+}
+
+.mainText span {
+    color: #00A36C;
+}
+
+.paragraph {
+    width: 55%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-weight: 200;
+}
+
+.topRight {
+    width: 13%;
+    height: 10%;
+    padding-right: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.talkBtn {
+    width: 100px;
+    height: 35px;
+    margin: auto;
+    background-color: #303030;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menuButton {
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    background-color: #303030;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menuButton:hover, .talkBtn:hover {
+    transform: scale(1.05);
+}
+
+.scrollbarContainer {
+    width: 7%;
+    height: 40%;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+}
+
+.scrollBox {
+    width: 30%;
+    height: 65%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.scrollDot {
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.455);
+}
+
+.active {
+    background-color: #00C78C;
+    box-shadow: 0px 0px 10px 0px #00C78C;
+    border: none;
+}
+
+.scrollBoxBar {
+    width: 5px;
+    height: 20px;
+    margin: auto;
+    background-color: #00C78C;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .mainText {
+        font-size: 7em;
+    }
+    .paragraph {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .leftSidebar {
+        width: 20%;
+    }
+    .mainTextContainer {
+        width: 60%;
+    }
+    .mainText {
+        font-size: 6em;
+    }
+    .topRight {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .leftSidebar {
+        width: 25%;
+    }
+    .textBox {
+        font-size: 16px;
+    }
+    .mainTextContainer {
+        width: 70%;
+    }
+    .mainText {
+        font-size: 5em;
+    }
+    .paragraph {
+        width: 80%;
+    }
+    .scrollbarContainer {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .leftSidebar {
+        display: none;
+    }
+    .mainTextContainer {
+        width: 90%;
+        height: 50%;
+    }
+    .mainText {
+        font-size: 4em;
+    }
+    .paragraph {
+        width: 90%;
+    }
+    .topRight {
+        width: 30%;
+    }
+    .talkBtn {
+        display: none;
+    }
+    .menuButton {
+        margin-right: 10px;
+    }
+    .scrollbarContainer {
+        width: 15%;
+    }
+    .backImg {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mainText {
+        font-size: 3em;
+    }
+    .paragraph {
+        font-size: 14px;
+    }
+}
+
+/* Height-based media queries */
+@media screen and (max-height: 700px) {
+    .mainTextContainer {
+        height: 50%;
+    }
+    .sidebarText {
+        height: 50%;
+    }
+    .textSection {
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .mainText {
+        font-size: 3em;
+    }
+    .paragraph {
+        font-size: 14px;
+    }
+}
+
+.cursor-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transition: transform 0.05s ease-out, background-color 0.1s;
+    z-index: 123123123;
+  }
